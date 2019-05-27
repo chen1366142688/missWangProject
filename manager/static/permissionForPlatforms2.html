@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width, initial-scale=1.0">
+    <title>Permissions</title>
+    <script>
+        function setApp(appStr) {
+            let appName = document.getElementById("appName");
+            if (!!appStr) {
+                appName.innerHTML = appStr;
+                document.getElementsByTagName("body")[0].className = "";
+            }
+        }
+
+        function onPrivacyPolicyClick() {
+            app.privacyPolicy();
+        }
+
+        function onContinueClick() {
+            app.CompleteProtocol();
+        }
+
+//                setTimeout(()=>setApp("Crazyloan"), 1000);
+    </script>
+</head>
+<body class="none">
+<h3>We need the following permissions for borrowing money from <span id="appName"> </span></h3>
+<p class="info">This information helps us get to know you better and determine if we can offer you a loan.</p>
+<div class="cards">
+    <div class="txt-content">
+        <h4>Location</h4>
+        <p>Cause currently we only provide loans in the Philippines, we need obtain your location.</p>
+    </div>
+    <div class="img-content">
+        <img src="./img/permissionForPlatforms2/location.png">
+    </div>
+</div>
+<div class="cards">
+    <div class="txt-content">
+        <h4>Contacts</h4>
+        <p>For obtaining your contacts to upload, we need use your contact permission.</p>
+    </div>
+    <div class="img-content">
+        <img src="./img/permissionForPlatforms2/contacts.png">
+    </div>
+</div>
+<div class="cards">
+    <div class="txt-content">
+        <h4>Camera</h4>
+        <p>For taking and uploading photos, we need use your camera.</p>
+    </div>
+    <div class="img-content">
+        <img src="./img/permissionForPlatforms2/camera.png">
+    </div>
+</div>
+<div class="cards">
+    <div class="txt-content">
+        <h4>Storage</h4>
+        <p>For helping us analyze your credit, we need use your documents upload.</p>
+    </div>
+    <div class="img-content">
+        <img src="./img/permissionForPlatforms2/storage.png">
+    </div>
+</div>
+<div class="cards">
+    <div class="txt-content">
+        <h4>Phone</h4>
+        <p>For ensuring you are the only person that can apply a loan from your device, we need get your phone's device
+            fingerprint.</p>
+    </div>
+    <div class="img-content">
+        <img src="./img/permissionForPlatforms2/phone.png">
+    </div>
+</div>
+<p class="info">By tapping ‘continue’ accept and agree to the</p>
+<div class="link"><span onclick="onPrivacyPolicyClick()">Privacy Policy</span></div>
+<button class="continue" onclick="onContinueClick()">Continue</button>
+</body>
+<style>
+    .none {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        font-family: Arial;
+    }
+
+    h3 {
+        margin: 49px 24px 0 24px;;
+        font-size: 20px;
+        color: #333333;
+    }
+
+    .info {
+        margin: 25px 24px 0 24px;
+        font-family: inherit;
+        font-size: 14px;
+        color: #333333;
+    }
+
+    .cards {
+        margin: 20px 24px 0 24px;
+        overflow: hidden;
+    }
+
+    .cards .img-content {
+        width: 27%;
+        text-align: center;
+        float: left;
+    }
+
+    .cards .img-content img {
+        width: 37px;
+        margin-top: 23px;
+    }
+
+    .cards .txt-content {
+        float: left;
+        width: 73%;
+    }
+
+    .cards .txt-content h4 {
+        font-size: 18px;
+        color: #333333;
+        margin: 0 0 15px 0;
+    }
+
+    .cards .txt-content p {
+        font-size: 14px;
+        color: #333333;
+        margin: 0 0 15px 0;
+    }
+
+    .link {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .link span {
+        color: #333333;
+        font-size: 14px;
+        text-decoration: underline;
+    }
+
+    .continue {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #6363FF;
+        height: 45px;
+        line-height: 45px;
+        border: none;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+    }
+</style>
+</html>

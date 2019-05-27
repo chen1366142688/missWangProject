@@ -1,0 +1,67 @@
+.resource-management {
+  margin-top: 2rem;
+}
+.resource-management .ant-collapse-header {
+  font-size: 14px;
+  font-weight: 500;
+}
+.resource-management .resource-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 45px;
+  border-bottom: solid 1px #cccccc;
+  line-height: 45px;
+  padding-left: 20px;
+}
+.resource-management .resource-item:hover {
+  background-color: #eeeeee;
+}
+.resource-management .resource-item > p:first-child {
+  -webkit-box-flex: 15;
+      -ms-flex: 15;
+          flex: 15;
+  font-size: 14px;
+}
+.resource-management .resource-item > p:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 22px;
+}
+.resource-management .resource-item > p:last-child > i {
+  cursor: pointer;
+  color: red;
+}
+.resource-management .input {
+  height: 45px;
+  margin-top: 15px;
+}
+.resource-management .input input {
+  height: 40px;
+}
+.resource-management .resource-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.resource-management .resource-header > p:first-child {
+  -webkit-box-flex: 15;
+      -ms-flex: 15;
+          flex: 15;
+}
+.resource-management .resource-header > p:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: red;
+  font-size: 22px;
+}

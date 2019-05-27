@@ -1,0 +1,35 @@
+.cllist .cl-form {
+  border: solid 1px #d9d9d9;
+  margin: 10px 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.cl-table {
+  margin: 10px 10px;
+}
+.cl-table .cl-table-cloumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cl-table .cl-table-cloumn > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 24px;
+  text-indent: 15px;
+  width: 120%;
+  margin-left: -8px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.cl-table .cl-table-cloumn > div:first-child {
+  border-bottom: solid 1px #d9d9d9;
+}
+.cl-table .yellow {
+  background-color: #FCE496;
+}

@@ -1,0 +1,351 @@
+import React from 'react';
+import QueueAnim from 'rc-queue-anim';
+import moment from 'moment';
+import { CLComponent, CLBlockList } from '../../../src/lib/component/index';
+import CLlist from '../../../src/lib/component/CLlist.jsx';
+import { CLAnimate, CL } from '../../../src/lib/tools/index';
+import { Interface } from '../../../src/lib/config/index';
+import _ from 'lodash';
+
+import { Button, message, Table, Icon, Spin, Tabs, DatePicker, Row, Col, Modal } from 'antd';
+
+let { contentType, getMonthUserReport } = Interface;
+let TB;
+
+//运营周报 用户方向
+
+class OperatorMonthlyBU extends CLComponent {
+    state = {
+        search: {},
+        pagination: {
+            total: 0,
+            pageSize: 10,
+            currentPage: 1
+        },
+        tableLoading: false,
+        showTableExport: false,
+        data: []
+    }
+
+    constructor( props ) {
+        super( props );
+        this.bindCtx( [
+            "renderBody",
+            "loadData",
+            "download",
+            "pageChage",
+            "handleCancel",
+            "getFormFields",
+        ] );
+    }
+
+
+    componentDidMount() {
+        const that = this;
+        //搜索条件
+        let sessionSearch = sessionStorage.getItem( 'search' );
+        let search = this.state.search;
+        if ( sessionSearch ) {
+            search = JSON.parse( sessionSearch );
+        }
+
+        //分页
+        let sessionPagination = sessionStorage.getItem( 'pagination' );
+        let pagination = this.state.pagination;
+        if ( sessionPagination ) {
+            pagination = JSON.parse( sessionPagination );
+        }
+
+        //排序
+        let sessionSorter = sessionStorage.getItem( 'sorter' );
+        let sorter = this.state.sorter;
+        if ( sessionSorter ) {
+            sorter = JSON.parse( sessionSorter );
+        }
+
+        let type = sessionStorage.getItem( "operateDataType" ) || "1";
+        this.setState( { type: type } )
+        this.loadData( this.state.search, this.state.pagination, this.state.sorter );
+    }
+
+
+
+
+
+    loadData( search, page, sorter ) {
+        const that = this;
+        that.setState( { tableLoading: true } );
+
+        let params = {
+                page: {
+                    currentPage: page.currentPage || 1,
+                    pageSize: page.pageSize || 10
+                },
+                searchCondition: search || this.state.search
+            }
+
+        const settings = {
+            contentType,
+            method: 'post',
+            url: getMonthUserReport.url,
+            data: JSON.stringify( params )
+        }
+        
+
+        function fn( res ) {
+
+            that.setState( { tableLoading: false } );
+
+            if ( res.data ) {
+
+
+                const pagination = {
+                    total: res.data.page.totalCount,
+                    pageSize: res.data.page.pageSize,
+                    currentPage: res.data.page.currentPage,
+                }
+
+                sessionStorage.setItem( "pagination", JSON.stringify( pagination ) );
+
+                sessionStorage.setItem( "search", JSON.stringify( search ) );
+
+                that.setState( {
+                    pagination: pagination,
+                    data: res.data.page.result,
+                    search: search
+                } )
+                
+                
+            }
+        }
+
+        CL.clReqwest( { settings, fn } );
+    }
+
+
+    download( target ) {
+        const that = this;
+        that.setState( { showTableExport: true } );
+        const { tableexport } = that.props;
+        setTimeout(() => {
+            TB = tableexport( document.querySelector("#ex-table-operator-monthly-bu"),{formats: ['csv','txt','xlsx']});
+        }, 100 );
+    }
+
+    handleCancel() {
+        const that = this;
+        that.setState( { showTableExport: false } );
+        if ( TB ) {
+            TB.remove();
+        }
+    }
+
+    getFormFields( fields ) {
+        let search = {};
+        _.map( fields, function( doc, index ) {
+            if ( doc ) {
+                if ( index === "sRepaymentTime" ) {
+                    search.beginTime = new Date( doc[0].format( "YYYY-MM-DD HH:mm" ) ).getTime();
+                    search.endTime = new Date( doc[1].format( "YYYY-MM-DD HH:mm" ) ).getTime();
+                } else {
+                    search[index] = doc;
+                }
+            }
+        } )
+        const pagination = this.state.pagination;
+        pagination.currentPage = 1;
+        console.log( "this is search debug" + search.beginTime + search.endTime );
+        this.setState( { search: search, pagination: pagination } );
+        this.loadData( search, pagination );
+    }
+
+    pageChage( e, filters, sorter ) {//list 切换页面
+        let pagination = {
+            currentPage: e.current,
+            pageSize: e.pageSize,
+            total: this.state.pagination.total
+        }
+
+        const SORTDIC = {
+            "applicationTime": 2,
+            "memberRegisterDate": 1,
+            "descend": 1,
+            "ascend": 2
+        }
+
+        let sorterClient = {
+            sortFieldType: SORTDIC[sorter.field] || 2,
+            sortType: SORTDIC[sorter.order] || 1,
+        }
+
+        this.setState( { pagination: pagination, sorter: sorterClient } )
+        this.loadData( this.state.search, pagination, sorterClient )
+    }
+
+   
+
+
+renderBody() {
+    let that = this;
+    const { data, } = that.state;
+    const { download } = that.props;
+    const columns = [
+                     {
+                         title: '日期',
+                         dataIndex: 'strDate',
+                         width: 200,
+                         render( index, record ) {
+                             return record.strDate
+                         }
+                     },
+                     {
+                         title: '新用户放款笔数',
+                         dataIndex: 'newUserlendingCount',
+                         width: 200,
+                         render( index, record ) {
+                             return CL.cf( record.newUserlendingCount, 0 )
+                         }
+                     },
+                     {
+                         title: '老用户放款笔数',
+                         dataIndex: 'oldUserlendingCount',
+                         width: 200,
+                         render( index, record ) {
+                             return CL.cf( record.oldUserlendingCount, 0 )
+                         }
+                     },
+                     {
+                         title: '新用户放款金额',
+                         dataIndex: 'newUserlendingAmount',
+                         width: 200,
+                         render( index, record ) {
+                             return CL.cf( record.newUserlendingAmount, 2)
+                         }
+                     }, {
+                         title: '老用户放款金额',
+                         dataIndex: 'oldUserlendingAmount',
+                         width: 200,
+                         render( index, record ) {
+                             return CL.cf( record.oldUserlendingAmount, 2 )
+                         }
+                     }, {
+                         title: '新用户放款率',
+                         dataIndex: 'newUserLengdingRate',
+                         width: 200,
+                         render( index, record ) {
+                             return CL.cf( record.newUserLengdingRate, 2 )+'%'
+                         }
+                     }, {
+                         title: '老用户放款率',
+                         dataIndex: 'oldUserLengdingRate',
+                         width: 200,
+                         render( index, record ) {
+                             return CL.cf( record.oldUserLengdingRate, 2 )+'%'
+                         }
+                     }
+    ];
+
+
+    const operation = [
+        {
+            id: "sRepaymentTime",
+            type: 'rangePicker',
+            label: '日期',
+            placeholder: 'ranger',
+        },
+    ];
+
+    let settings = {
+        data: data,
+        columns: columns,
+        operation: operation,
+        getFields: that.getFormFields,
+        pagination: that.state.pagination || {},
+        pageChange: that.pageChage,
+        tableLoading: that.state.tableLoading,
+        search: that.state.search,
+        btn: [
+            {
+                title: "Download",
+                type: "danger",
+                fn: that.download
+            }
+        ],
+    }
+
+
+    //下载表格
+    const th = [
+        '日期',
+        '新用户放款笔数',
+        '老用户放款笔数',
+        '新用户放款金额',
+        '老用户放款金额',
+        '新用户放款率',
+        '老用户放款率',
+    ];
+
+    return (
+        <div className="credit-collection" key="credit-collection">
+            <CLlist settings={settings} />
+
+            <Modal
+                className="te-modal"
+                title="Download"
+                closable={true}
+                visible={that.state.showTableExport}
+                width={"100%"}
+                style={{ top: 0 }}
+                onCancel={that.handleCancel}
+                footer={[
+                    <Button key="back" size="large" onClick={that.handleCancel}>Cancel</Button>,
+                ]}
+            >
+                <table className="ex-table" id="ex-table-operator-monthly-bu">
+                    <thead>
+                        <tr>
+                            {th.map( function( doc ) {
+                                return ( <th key={doc}>{doc}</th> )
+                            } )}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            data.map( function( record, index ) {
+                                return (
+                                    
+                                    <tr key={index}>
+                                        <td>{record.strDate}</td>
+                                        <td>{CL.cf( record.newUserlendingCount, 0 )}</td>
+                                        <td>{CL.cf( record.oldUserlendingCount, 0 )}</td>
+                                        <td>{CL.cf( record.newUserlendingAmount, 2 )}</td>
+                                        <td>{CL.cf( record.oldUserlendingAmount, 2 )}</td>
+                                        <td>{CL.cf( record.newUserLengdingRate, 2 )+'%'}</td>
+                                        <td>{CL.cf( record.oldUserLengdingRate, 2 )+'%'}</td>
+                                    </tr>
+                                     
+                                )
+                            } )
+                        }
+                    </tbody>
+                </table>
+            </Modal>
+        </div>
+    )
+
+}
+
+
+
+
+    render( data ) {
+        return (
+            <QueueAnim className="animate-content">
+                {this.renderBody()}
+            </QueueAnim>
+        )
+    }
+}
+export default OperatorMonthlyBU;
+
+//add something for commit

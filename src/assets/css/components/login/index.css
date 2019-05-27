@@ -1,0 +1,105 @@
+.cl-login-wrap .login-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.cl-login-wrap .login-logo {
+  position: absolute;
+  top: 70px;
+  left: 80px;
+}
+.cl-login-wrap .login-title-1 {
+  position: absolute;
+  top: 80px;
+  left: 180px;
+}
+.cl-login-wrap .login-title-2 {
+  position: absolute;
+  top: 130px;
+  left: 180px;
+}
+.cl-login-wrap .cl-login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 650px;
+  padding-top: 100px;
+}
+.cl-login-wrap .cl-login .login-form {
+  border: solid 1px #109Fe9;
+  padding: 10px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 42px;
+  bottom: 43px;
+  right: 50px;
+  width: 400px;
+}
+.cl-login-wrap .cl-login .login-form h3 {
+  font-size: 30px;
+  margin-top: 170px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.cl-login-wrap .cl-login .login-form input {
+  border: none;
+  border-bottom: solid 1px #cccccc;
+  border-radius: 0;
+  outline: none;
+  font-size: 1.1rem;
+  padding-left: 2.2rem;
+}
+.cl-login-wrap .cl-login .login-form input:focus {
+  outline: none;
+  box-shadow: none;
+  border-bottom: solid 1px #cccccc;
+}
+.cl-login-wrap .cl-login .login-form i {
+  font-size: 1.2rem;
+}
+.cl-login-wrap .cl-login .login-form .ant-form-item-control {
+  padding: 0 15px;
+}
+.cl-login-wrap .cl-login .login-form .login-form-button {
+  width: 94%;
+  height: 50px;
+  border-radius: 0;
+  margin-left: 3%;
+  font-size: 1.2rem;
+  background-color: #5387ff;
+}
+.cl-login-wrap .cl-login .login-form .remember-me {
+  text-align: center;
+}
+.cl-login-wrap .cl-login .login-form .remember-me label {
+  font-size: 1rem;
+}
+.cl-login-wrap .login-title-3 {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+}
+@media screen and (max-width: 1180px) {
+  .cl-login-wrap .login-title-3 {
+    left: 10%;
+  }
+}
+@media screen and (min-width: 1190px) and (max-width: 1480px) {
+  .cl-login-wrap .login-title-3 {
+    left: 20%;
+  }
+}
+@media screen and (min-width: 1490px) and (max-width: 1520px) {
+  .cl-login-wrap .login-title-3 {
+    left: 30%;
+    zoom: 1.2;
+  }
+}
+@media screen and (min-width: 1530px) {
+  .cl-login-wrap .login-title-3 {
+    left: 40%;
+    zoom: 1.2;
+  }
+}

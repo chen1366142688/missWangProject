@@ -1,0 +1,162 @@
+@import url('components/faqs/index.css');
+@import url('components/login/index.css');
+@import url('components/clblockList/index.css');
+@import url('components/cllist/index.css');
+@import url('components/clradio/index.css');
+@import url('components/draglist/index.css');
+@import url('components/loanaudit/index.css');
+@import url('components/feedback/index.css');
+@import url('components/creditCollection/index.css');
+@import url('components/bannerManagement/bannerManagement.css');
+@import url('components/resourceManagement/resourceManagement.css');
+@import url('components/creditReport/creditReport.css');
+@import url('components/monitorData/dailyData.css');
+@import url('components/BiMainProcess/registerApplyFunnel.css');
+@import url('components/mailCenter/maiCenter.css');
+@import url('layout.css');
+@import url('viewer.min.css');
+@import url('jquery.magnify.css');
+@import url('components/smallTools/index.css');
+.table-sorter {
+  padding: 10px;
+}
+.table-sorter .sorter-tag-panel {
+  display: inline-block;
+  vertical-align: top;
+}
+.table-sorter .sorter-handler {
+  display: inline-block;
+  vertical-align: top;
+}
+.table-sorter .sorter-handler .sorter-panel {
+  position: absolute;
+  margin-top: 2px;
+  z-index: 1000;
+  background: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.table-sorter .sorter-handler .sorter-panel ul {
+  list-style-type: none;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  max-height: 150px;
+  overflow: auto;
+  padding: 10px;
+}
+.table-sorter .sorter-handler .sorter-panel .sorter-button {
+  text-align: center;
+  padding: 0 10px 10px 10px;
+}
+.table-sorter .sorter-handler .sorter-panel.disabled {
+  display: none;
+}
+.INDICATOR-MANAGEMENT,
+.INDICATOR-QUERY,
+.RULE-GROUP-MANAGEMENT,
+.RULE-MANAGEMENT,
+.RULES-FOR-GROUP,
+.STRATEGY-MANAGEMENT,
+.STRATEGY-QUERY,
+.USER-GROUP-MANAGEMENT,
+.SYSTEM-PARAMS {
+  margin: 15px;
+}
+#app {
+  background-color: #EEEEEE;
+  height: 100%;
+  overflow: hidden;
+}
+* {
+  -webkit-overflow-scrolling: touch;
+}
+.example-img {
+  width: 100%;
+}
+pre {
+  white-space: pre-wrap;
+}
+* {
+  padding: 0 0;
+}
+.full-loading {
+  min-height: 400px;
+  line-height: 400px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+}
+.ant-modal {
+  min-width: 700px !important;
+}
+.anticon-check-circle {
+  color: green;
+}
+.anticon-close-circle {
+  color: red;
+}
+.ant-table-row > td {
+  color: #000000;
+}
+.table-title {
+  color: #999999 !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.anticon-exclamation-circle {
+  color: red;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  animation: 1.5s fade-in infinite;
+}
+.twinkle {
+  color: red;
+  animation: 1.5s fade-in infinite;
+}
+.blueFont td {
+  color: #ff6206;
+}
+.withdrawModal .ant-modal-content {
+  width: 301px !important;
+  margin: 0 auto;
+}
+.withdrawModal input {
+  width: 200px;
+  margin-left: 25px;
+}
+.withdrawModal .ant-select {
+  width: 200px;
+  margin-left: 25px;
+}
+.withdrawModal .ant-modal-footer {
+  text-align: center !important;
+}
+.withdrawModal .ant-modal-body {
+  line-height: 10px;
+  font-weight: 400;
+  color: #000;
+}
+.promotionClients .ant-modal-body .ant-form-item-control-wrapper {
+  width: 260px;
+}

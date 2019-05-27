@@ -1,0 +1,87 @@
+.MAIL-SETTING {
+  margin: 0 15px;
+}
+.MAIL-SETTING .mail-title {
+  padding: 10px;
+}
+.MAIL-ACCOUNT-LIST {
+  margin: 0 15px;
+}
+.MAIL-ACCOUNT-LIST .mail-title {
+  padding: 10px;
+}
+.NEW-MAIL {
+  margin: 15px 30px;
+}
+.NEW-MAIL .steps-content {
+  padding: 15px;
+}
+.NEW-MAIL .steps-content .step-one-content {
+  margin-top: 150px;
+  text-align: center;
+  min-height: 300px;
+}
+.NEW-MAIL .steps-content .step-one-content > span {
+  font-size: 16px;
+  color: black;
+}
+.NEW-MAIL .steps-action {
+  text-align: center;
+}
+.SET-RECIPIENT {
+  margin: 20px 20%;
+  min-height: 350px;
+}
+.SET-RECIPIENT .individual-recipient {
+  margin-bottom: 20px;
+}
+.SET-RECIPIENT .individual-recipient p {
+  font-size: 16px;
+  color: black;
+}
+.SET-RECIPIENT .group-recipient {
+  margin-bottom: 20px;
+}
+.SET-RECIPIENT .group-recipient p {
+  font-size: 16px;
+  color: black;
+}
+.SET-CRON {
+  margin: 20px 20%;
+  min-height: 350px;
+}
+.SET-CRON .send-type {
+  margin-bottom: 20px;
+}
+.SET-CRON .send-type p {
+  font-size: 16px;
+  color: black;
+}
+.SET-CRON .timing-task {
+  margin-bottom: 20px;
+}
+.SET-CRON .timing-task p {
+  font-size: 16px;
+  color: black;
+}
+.SET-CRON .cycle-task p {
+  font-size: 16px;
+  color: black;
+  margin-top: 20px;
+}
+.SET-TEMPLATE {
+  margin: 20px 20%;
+  min-height: 350px;
+}
+.SET-TEMPLATE p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: black;
+}
+.SET-TEMPLATE .hidden {
+  display: none;
+}
+.wait-for-development {
+  color: orange;
+  font-size: 16px;
+}

@@ -1,0 +1,117 @@
+.drag-list {
+  margin: 10px 10px;
+}
+.drag-list table,
+.drag-list th {
+  border: 1px solid black;
+}
+.drag-list td {
+  border-right: 1px solid black;
+}
+.drag-list .drag-tab {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  border-collapse: separate;
+}
+.drag-list .drag-tab td {
+  height: 80px;
+  padding: 6px 6px;
+}
+.drag-list .drag-tab thead td {
+  font-weight: bold;
+  padding: 10px 8px;
+}
+.drag-list .head {
+  min-height: 40px;
+  border: solid 1px #cccccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.drag-list .head .head-box {
+  border-left: solid 1px #cccccc;
+  min-height: 40px;
+  padding: 10px 8px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.drag-list .head .head-box:first-child {
+  border-left: none;
+}
+.drag-list li {
+  height: 80px;
+  border: solid 1px #cccccc;
+  border-top: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.drag-list li > div {
+  border-left: solid 1px #cccccc;
+  padding: 10px 8px;
+}
+.drag-list li > div:first-child {
+  border-left: none;
+}
+.drag-list .hide {
+  display: none;
+}
+.drag-list .drag-up {
+  -webkit-animation: dragup ease 0.2s 1;
+          animation: dragup ease 0.2s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #eeeeee;
+}
+.drag-list .drag-down {
+  -webkit-animation: dragdown ease 0.2s 1;
+          animation: dragdown ease 0.2s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background-color: #eeeeee;
+}
+@-webkit-keyframes dragup {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 80px;
+  }
+}
+@keyframes dragup {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 80px;
+  }
+}
+@-webkit-keyframes dragdown {
+  from {
+    margin-bottom: 0px;
+    margin-top: 80px;
+  }
+  to {
+    margin-bottom: 80px;
+    margin-top: 0px;
+  }
+}
+@keyframes dragdown {
+  from {
+    margin-bottom: 0px;
+    margin-top: 80px;
+  }
+  to {
+    margin-bottom: 80px;
+    margin-top: 0px;
+  }
+}

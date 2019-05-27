@@ -1,0 +1,588 @@
+body{margin:0;padding:0}
+.box{
+    width:750px;
+    height:90px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom:1px solid #BFBFBF;
+    position: relative;
+}
+.item{
+    display: inline-block;
+    text-align: center;
+    width:250px;
+    height:90px;
+    line-height:90px;
+    font-size:30px;
+}
+.active{
+    color: #6363FF;
+    font-weight: bold;
+    height:90px;
+    line-height:90px;
+    position:relative;
+}
+.active:before {
+    content:"";
+    position:absolute;
+    left:25%;
+    bottom:1px;
+    width:50%;
+    height:9px;
+    background-color:#6363FF;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.content{
+     margin-top:52px;
+     width:685px;
+     height:100%;
+     margin-left:30px;
+     border-left:5px solid #b3e1ff;
+     padding-left:30px;
+ }
+.contentTwo,.contentThree{
+    margin-top:52px;
+    width:685px;
+    height:100%;
+    margin-left:30px;
+    padding-left:30px;
+    display: none;
+}
+
+.contentItem{
+    position: relative;
+    margin-bottom:50px;
+    padding-right:60px;
+}
+.contentItems{
+    background:rgba(247,242,225,1);
+    margin-right: 50px;
+    margin-left:-20px;
+    padding-left: 20px;
+}
+.reds{
+    color:red;
+}
+h2{
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom:25px;
+    font-family:Roboto-Bold;
+    color:rgba(51,51,51,1);
+}
+h3{
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom:25px;
+    font-family:Roboto-Bold;
+    color:rgba(51,51,51,1);
+
+}
+h5{
+        display: inline-block;
+        color:red;
+        font-size: 24px;
+    }
+.buo{
+    font-size: 28px;
+    line-height: 40px;
+    font-family:Roboto-Regular;
+    color:#333333;
+}
+.one{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background: #6363FF;
+    position: absolute;
+    top:0;
+    left:-42px;
+}
+.buoTitle{
+    font-size: 24px;
+    font-family:Roboto-Medium;
+    color:rgba(51,51,51,1);
+    line-height: 60px;
+    font-weight: bold;
+    margin:10px 0;
+}
+mark{
+    color: #6363FF;
+    background: #ffffff;
+    font-size: 24px;
+    line-height: 40px;
+    font-family:Roboto-Regular;
+}
+/*适配iphone5*/
+@media screen and (max-width: 320px){
+    .box{
+        width:750px;
+        height:90px;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        border-bottom:1px solid #BFBFBF;
+        position: relative;
+    }
+    .item{
+        display: inline-block;
+        text-align: center;
+        width:250px;
+        height:90px;
+        line-height:90px;
+        font-size:30px;
+    }
+    .active{
+        color: #6363FF;
+        font-weight: bold;
+        height:90px;
+        line-height:90px;
+        position:relative;
+    }
+    .active:before {
+        content:"";
+        position:absolute;
+        left:25%;
+        bottom:1px;
+        width:50%;
+        height:9px;
+        background-color:#6363FF;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .content{
+        margin-top:52px;
+        width:685px;
+        height:100%;
+        margin-left:30px;
+        border-left:5px solid #b3e1ff;
+        padding-left:30px;
+    }
+    .contentTwo{
+        margin-top:52px;
+        width:685px;
+        height:100%;
+        margin-left:30px;
+        padding-left:30px;
+        display: none;
+    }
+    .contentThree{
+        margin-top:52px;
+        width:685px;
+        height:1000px;
+        margin-left:30px;
+        padding-left:30px;
+        display: none;
+    }
+    .contentItem{
+        position: relative;
+        margin-bottom:50px;
+        padding-right:60px;
+    }
+    h2{
+        font-size: 26px;
+        font-weight: bold;
+        padding-bottom:25px;
+        font-family:Roboto-Bold;
+        color:rgba(51,51,51,1);
+    }
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom:25px;
+        font-family:Roboto-Bold;
+        color:rgba(51,51,51,1);
+        
+    }
+    h5{
+        display: inline-block;
+        color:red;
+        font-size: 24px;
+    }
+    .buo{
+        font-size: 24px;
+        line-height: 40px;
+        font-family:Roboto-Regular;
+        color:#333333;
+    }
+    .one{
+        width:22px;
+        height:22px;
+        border-radius:50%;
+        background: #6363FF;
+        position: absolute;
+        top:0;
+        left:-42px;
+    }
+    .buoTitle{
+        font-size: 24px;
+        font-family:Roboto-Medium;
+        color:rgba(51,51,51,1);
+        line-height: 60px;
+        font-weight: bold;
+    }
+    mark{
+        color: #6363FF;
+        background: #ffffff;
+        font-size: 24px;
+        line-height: 40px;
+        font-family:Roboto-Regular;
+    }
+    .contentItems{
+        background:rgba(247,242,225,1);
+        border-radius:10px;
+    }
+    .reds{
+        color:red;
+    }
+}
+/*适配iphone6plus*/
+@media screen and (min-width: 376px) and (max-width: 414px){
+    .box{
+        width:750px;
+        height:90px;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        border-bottom:1px solid #BFBFBF;
+        position: relative;
+    }
+    .item{
+        display: inline-block;
+        text-align: center;
+        width:250px;
+        height:90px;
+        line-height:90px;
+        font-size:30px;
+    }
+    .active{
+        color: #6363FF;
+        font-weight: bold;
+        height:90px;
+        line-height:90px;
+        position:relative;
+    }
+    .active:before {
+        content:"";
+        position:absolute;
+        left:25%;
+        bottom:1px;
+        width:50%;
+        height:9px;
+        background-color:#6363FF;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .content{
+        margin-top:52px;
+        width:685px;
+        height:100%;
+        margin-left:30px;
+        border-left:5px solid #b3e1ff;
+        padding-left:30px;
+    }
+    .contentTwo{
+        margin-top:52px;
+        width:685px;
+        height:100%;
+        margin-left:30px;
+        padding-left:30px;
+        display: none;
+    }
+    .contentThree{
+        margin-top:52px;
+        width:685px;
+        height:1000px;
+        margin-left:30px;
+        padding-left:30px;
+        display: none;
+    }
+    .contentItem{
+        position: relative;
+        margin-bottom:50px;
+        padding-right:60px;
+    }
+    h2{
+        font-size: 26px;
+        font-weight: bold;
+        padding-bottom:25px;
+        font-family:Roboto-Bold;
+        color:rgba(51,51,51,1);
+    }
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom:25px;
+        font-family:Roboto-Bold;
+        color:rgba(51,51,51,1);
+        
+    }
+    h5{
+        display: inline-block;
+        color:red;
+        font-size: 24px;
+    }
+    .buo{
+        font-size: 24px;
+        line-height: 40px;
+        font-family:Roboto-Regular;
+        color:#333333;
+    }
+    .one{
+        width:22px;
+        height:22px;
+        border-radius:50%;
+        background: #6363FF;
+        position: absolute;
+        top:0;
+        left:-42px;
+    }
+    .buoTitle{
+        font-size: 24px;
+        font-family:Roboto-Medium;
+        color:rgba(51,51,51,1);
+        line-height: 60px;
+        font-weight: bold;
+    }
+    mark{
+        color: #6363FF;
+        background: #ffffff;
+        font-size: 24px;
+        line-height: 40px;
+        font-family:Roboto-Regular;
+    }
+}
+/*适配ipad*/
+@media screen and (min-width: 751px) and (max-width: 768px){
+    .box{
+        width:100%;
+        height:130px;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        border-bottom:1px solid #BFBFBF;
+        position: relative;
+    }
+    .item{
+        display: inline-block;
+        text-align: center;
+        width:33.333333%;
+        height:130px;
+        line-height:130px;
+        font-size:50px;
+    }
+    .active{
+        color: #6363FF;
+        font-weight: bold;
+        height:130px;
+        line-height:130px;
+        position:relative;
+    }
+    .active:before {
+        content:"";
+        position:absolute;
+        left:25%;
+        bottom:1px;
+        width:50%;
+        height:12px;
+        background-color:#6363FF;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .content{
+        margin-top:80px;
+        width:90%;
+        height:100%;
+        margin-left:50px;
+        border-left:8px solid #b3e1ff;
+        padding-left:40px;
+        box-sizing: border-box;
+    }
+    .contentTwo,.contentThree{
+        margin-top:80px;
+        width:90%;
+        height:100%;
+        margin-left:50px;
+        padding-left:40px;
+        box-sizing: border-box;
+        display: none;
+    }
+    .contentItem{
+        position: relative;
+        margin-bottom:65px;
+        padding-right:0;
+    }
+    h2{
+        font-size: 52px;
+        font-weight: bold;
+        padding-bottom:35px;
+        font-family:Roboto-Bold;
+        color:rgba(51,51,51,1);
+    }
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom:25px;
+        font-family:Roboto-Bold;
+        color:rgba(51,51,51,1);
+        
+    }
+    h5{
+        display: inline-block;
+        color:red;
+        font-size: 24px;
+    }
+    .buo{
+        font-size: 48px;
+        line-height: 60px;
+        font-family:Roboto-Regular;
+        color:#333333;
+    }
+    .one{
+        width:28px;
+        height:28px;
+        border-radius:50%;
+        background: #6363FF;
+        position: absolute;
+        top:0;
+        left:-54px;
+    }
+    .buoTitle{
+        font-size: 46px;
+        font-family:Roboto-Medium;
+        color:rgba(51,51,51,1);
+        line-height: 60px;
+        font-weight: bold;
+        margin:20px 0;
+    }
+    mark{
+        color: #6363FF;
+        background: #ffffff;
+        font-size: 48px;
+        line-height: 60px;
+        font-family:Roboto-Regular;
+    }
+}
+/*适配ipad pro*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .box{
+        width:100%;
+        height:130px;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        border-bottom:1px solid #BFBFBF;
+        position: relative;
+    }
+    .item{
+        display: inline-block;
+        text-align: center;
+        width:33.333333%;
+        height:130px;
+        line-height:130px;
+        font-size:50px;
+    }
+    .active{
+        color: #6363FF;
+        font-weight: bold;
+        height:130px;
+        line-height:130px;
+        position:relative;
+    }
+    .active:before {
+        content:"";
+        position:absolute;
+        left:25%;
+        bottom:1px;
+        width:50%;
+        height:12px;
+        background-color:#6363FF;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .content{
+        margin-top:80px;
+        width:90%;
+        height:100%;
+        margin-left:50px;
+        border-left:8px solid #b3e1ff;
+        padding-left:40px;
+        box-sizing: border-box;
+    }
+    .contentTwo,.contentThree{
+        margin-top:80px;
+        width:90%;
+        height:100%;
+        margin-left:50px;
+        padding-left:40px;
+        box-sizing: border-box;
+        display: none;
+    }
+    .contentItem{
+        position: relative;
+        margin-bottom:65px;
+        padding-right:0;
+    }
+    h2{
+        font-size: 52px;
+        font-weight: bold;
+        padding-bottom:35px;
+        font-family:Roboto-Bold;
+        color:rgba(51,51,51,1);
+    }
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom:25px;
+        font-family:Roboto-Bold;
+        color:rgba(51,51,51,1);
+        
+    }
+    h5{
+        display: inline-block;
+        color:red;
+        font-size: 24px;
+    }
+    .buo{
+        font-size: 48px;
+        line-height: 60px;
+        font-family:Roboto-Regular;
+        color:#333333;
+    }
+    .one{
+        width:28px;
+        height:28px;
+        border-radius:50%;
+        background: #6363FF;
+        position: absolute;
+        top:0;
+        left:-54px;
+    }
+    .buoTitle{
+        font-size: 46px;
+        font-family:Roboto-Medium;
+        color:rgba(51,51,51,1);
+        line-height: 60px;
+        font-weight: bold;
+        margin:20px 0;
+    }
+    mark{
+        color: #6363FF;
+        background: #ffffff;
+        font-size: 48px;
+        line-height: 60px;
+        font-family:Roboto-Regular;
+    }
+}

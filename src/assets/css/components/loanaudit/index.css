@@ -1,0 +1,14 @@
+.loan-audit-details .loan-details-oper,
+.loan-audit-details .save-note {
+  margin: 20px 10px;
+}
+.loan-audit-details .save-note {
+  margin-top: 50px;
+}
+.loan-audit-details .btn-style {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.loan-audit-details .btn-style > div {
+  text-align: center;
+}

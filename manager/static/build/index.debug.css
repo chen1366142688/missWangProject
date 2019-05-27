@@ -1,0 +1,668 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 10rem;
+  height: 1.2rem;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.013333rem solid #BFBFBF;
+  position: relative;
+}
+
+.item {
+  display: inline-block;
+  text-align: center;
+  width: 3.333333rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.4rem;
+}
+
+.active {
+  color: #6363FF;
+  font-weight: bold;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  position: relative;
+}
+
+.active:before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0.013333rem;
+  width: 50%;
+  height: 0.12rem;
+  background-color: #6363FF;
+  border-bottom-left-radius: 0.08rem;
+  border-bottom-right-radius: 0.08rem;
+  border-top-left-radius: 0.08rem;
+  border-top-right-radius: 0.08rem;
+}
+
+.content {
+  margin-top: 0.693333rem;
+  width: 9.133333rem;
+  height: 100%;
+  margin-left: 0.4rem;
+  border-left: 0.066667rem solid #b3e1ff;
+  padding-left: 0.4rem;
+}
+
+.contentTwo,
+.contentThree {
+  margin-top: 0.693333rem;
+  width: 9.133333rem;
+  height: 100%;
+  margin-left: 0.4rem;
+  padding-left: 0.4rem;
+  display: none;
+}
+
+.contentItem {
+  position: relative;
+  margin-bottom: 0.666667rem;
+  padding-right: 0.8rem;
+}
+
+.contentItems {
+  background: rgba(247,242,225,1);
+  margin-right: 0.666667rem;
+  margin-left: -0.266667rem;
+  padding-left: 0.266667rem;
+}
+
+.reds {
+  color: red;
+}
+
+h2 {
+  font-size: 0.346667rem;
+  font-weight: bold;
+  padding-bottom: 0.333333rem;
+  font-family: Roboto-Bold;
+  color: rgba(51,51,51,1);
+}
+
+h3 {
+  font-size: 0.32rem;
+  font-weight: bold;
+  padding-bottom: 0.333333rem;
+  font-family: Roboto-Bold;
+  color: rgba(51,51,51,1);
+}
+
+h5 {
+  display: inline-block;
+  color: red;
+  font-size: 0.32rem;
+}
+
+.buo {
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  font-family: Roboto-Regular;
+  color: #333333;
+}
+
+.one {
+  width: 0.293333rem;
+  height: 0.293333rem;
+  border-radius: 50%;
+  background: #6363FF;
+  position: absolute;
+  top: 0;
+  left: -0.56rem;
+}
+
+.buoTitle {
+  font-size: 0.32rem;
+  font-family: Roboto-Medium;
+  color: rgba(51,51,51,1);
+  line-height: 0.8rem;
+  font-weight: bold;
+  margin: 0.133333rem 0;
+}
+
+mark {
+  color: #6363FF;
+  background: #ffffff;
+  font-size: 0.32rem;
+  line-height: 0.533333rem;
+  font-family: Roboto-Regular;
+}
+
+/*适配iphone5*/
+
+@media screen and (max-width: 320px) {
+  .box {
+    width: 10rem;
+    height: 1.2rem;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.013333rem solid #BFBFBF;
+    position: relative;
+  }
+
+  .item {
+    display: inline-block;
+    text-align: center;
+    width: 3.333333rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 0.4rem;
+  }
+
+  .active {
+    color: #6363FF;
+    font-weight: bold;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    position: relative;
+  }
+
+  .active:before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0.013333rem;
+    width: 50%;
+    height: 0.12rem;
+    background-color: #6363FF;
+    border-bottom-left-radius: 0.08rem;
+    border-bottom-right-radius: 0.08rem;
+    border-top-left-radius: 0.08rem;
+    border-top-right-radius: 0.08rem;
+  }
+
+  .content {
+    margin-top: 0.693333rem;
+    width: 9.133333rem;
+    height: 100%;
+    margin-left: 0.4rem;
+    border-left: 0.066667rem solid #b3e1ff;
+    padding-left: 0.4rem;
+  }
+
+  .contentTwo {
+    margin-top: 0.693333rem;
+    width: 9.133333rem;
+    height: 100%;
+    margin-left: 0.4rem;
+    padding-left: 0.4rem;
+    display: none;
+  }
+
+  .contentThree {
+    margin-top: 0.693333rem;
+    width: 9.133333rem;
+    height: 13.333333rem;
+    margin-left: 0.4rem;
+    padding-left: 0.4rem;
+    display: none;
+  }
+
+  .contentItem {
+    position: relative;
+    margin-bottom: 0.666667rem;
+    padding-right: 0.8rem;
+  }
+
+  h2 {
+    font-size: 0.346667rem;
+    font-weight: bold;
+    padding-bottom: 0.333333rem;
+    font-family: Roboto-Bold;
+    color: rgba(51,51,51,1);
+  }
+
+  h3 {
+    font-size: 0.32rem;
+    font-weight: bold;
+    padding-bottom: 0.333333rem;
+    font-family: Roboto-Bold;
+    color: rgba(51,51,51,1);
+  }
+
+  h5 {
+    display: inline-block;
+    color: red;
+    font-size: 0.32rem;
+  }
+
+  .buo {
+    font-size: 0.32rem;
+    line-height: 0.533333rem;
+    font-family: Roboto-Regular;
+    color: #333333;
+  }
+
+  .one {
+    width: 0.293333rem;
+    height: 0.293333rem;
+    border-radius: 50%;
+    background: #6363FF;
+    position: absolute;
+    top: 0;
+    left: -0.56rem;
+  }
+
+  .buoTitle {
+    font-size: 0.32rem;
+    font-family: Roboto-Medium;
+    color: rgba(51,51,51,1);
+    line-height: 0.8rem;
+    font-weight: bold;
+  }
+
+  mark {
+    color: #6363FF;
+    background: #ffffff;
+    font-size: 0.32rem;
+    line-height: 0.533333rem;
+    font-family: Roboto-Regular;
+  }
+
+  .contentItems {
+    background: rgba(247,242,225,1);
+    border-radius: 0.133333rem;
+  }
+
+  .reds {
+    color: red;
+  }
+}
+
+/*适配iphone6plus*/
+
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .box {
+    width: 10rem;
+    height: 1.2rem;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.013333rem solid #BFBFBF;
+    position: relative;
+  }
+
+  .item {
+    display: inline-block;
+    text-align: center;
+    width: 3.333333rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 0.4rem;
+  }
+
+  .active {
+    color: #6363FF;
+    font-weight: bold;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    position: relative;
+  }
+
+  .active:before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0.013333rem;
+    width: 50%;
+    height: 0.12rem;
+    background-color: #6363FF;
+    border-bottom-left-radius: 0.08rem;
+    border-bottom-right-radius: 0.08rem;
+    border-top-left-radius: 0.08rem;
+    border-top-right-radius: 0.08rem;
+  }
+
+  .content {
+    margin-top: 0.693333rem;
+    width: 9.133333rem;
+    height: 100%;
+    margin-left: 0.4rem;
+    border-left: 0.066667rem solid #b3e1ff;
+    padding-left: 0.4rem;
+  }
+
+  .contentTwo {
+    margin-top: 0.693333rem;
+    width: 9.133333rem;
+    height: 100%;
+    margin-left: 0.4rem;
+    padding-left: 0.4rem;
+    display: none;
+  }
+
+  .contentThree {
+    margin-top: 0.693333rem;
+    width: 9.133333rem;
+    height: 13.333333rem;
+    margin-left: 0.4rem;
+    padding-left: 0.4rem;
+    display: none;
+  }
+
+  .contentItem {
+    position: relative;
+    margin-bottom: 0.666667rem;
+    padding-right: 0.8rem;
+  }
+
+  h2 {
+    font-size: 0.346667rem;
+    font-weight: bold;
+    padding-bottom: 0.333333rem;
+    font-family: Roboto-Bold;
+    color: rgba(51,51,51,1);
+  }
+
+  h3 {
+    font-size: 0.32rem;
+    font-weight: bold;
+    padding-bottom: 0.333333rem;
+    font-family: Roboto-Bold;
+    color: rgba(51,51,51,1);
+  }
+
+  h5 {
+    display: inline-block;
+    color: red;
+    font-size: 0.32rem;
+  }
+
+  .buo {
+    font-size: 0.32rem;
+    line-height: 0.533333rem;
+    font-family: Roboto-Regular;
+    color: #333333;
+  }
+
+  .one {
+    width: 0.293333rem;
+    height: 0.293333rem;
+    border-radius: 50%;
+    background: #6363FF;
+    position: absolute;
+    top: 0;
+    left: -0.56rem;
+  }
+
+  .buoTitle {
+    font-size: 0.32rem;
+    font-family: Roboto-Medium;
+    color: rgba(51,51,51,1);
+    line-height: 0.8rem;
+    font-weight: bold;
+  }
+
+  mark {
+    color: #6363FF;
+    background: #ffffff;
+    font-size: 0.32rem;
+    line-height: 0.533333rem;
+    font-family: Roboto-Regular;
+  }
+}
+
+/*适配ipad*/
+
+@media screen and (min-width: 751px) and (max-width: 768px) {
+  .box {
+    width: 100%;
+    height: 1.733333rem;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.013333rem solid #BFBFBF;
+    position: relative;
+  }
+
+  .item {
+    display: inline-block;
+    text-align: center;
+    width: 33.333333%;
+    height: 1.733333rem;
+    line-height: 1.733333rem;
+    font-size: 0.666667rem;
+  }
+
+  .active {
+    color: #6363FF;
+    font-weight: bold;
+    height: 1.733333rem;
+    line-height: 1.733333rem;
+    position: relative;
+  }
+
+  .active:before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0.013333rem;
+    width: 50%;
+    height: 0.16rem;
+    background-color: #6363FF;
+    border-bottom-left-radius: 0.16rem;
+    border-bottom-right-radius: 0.16rem;
+    border-top-left-radius: 0.16rem;
+    border-top-right-radius: 0.16rem;
+  }
+
+  .content {
+    margin-top: 1.066667rem;
+    width: 90%;
+    height: 100%;
+    margin-left: 0.666667rem;
+    border-left: 0.106667rem solid #b3e1ff;
+    padding-left: 0.533333rem;
+    box-sizing: border-box;
+  }
+
+  .contentTwo,
+  .contentThree {
+    margin-top: 1.066667rem;
+    width: 90%;
+    height: 100%;
+    margin-left: 0.666667rem;
+    padding-left: 0.533333rem;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .contentItem {
+    position: relative;
+    margin-bottom: 0.866667rem;
+    padding-right: 0;
+  }
+
+  h2 {
+    font-size: 0.693333rem;
+    font-weight: bold;
+    padding-bottom: 0.466667rem;
+    font-family: Roboto-Bold;
+    color: rgba(51,51,51,1);
+  }
+
+  h3 {
+    font-size: 0.32rem;
+    font-weight: bold;
+    padding-bottom: 0.333333rem;
+    font-family: Roboto-Bold;
+    color: rgba(51,51,51,1);
+  }
+
+  h5 {
+    display: inline-block;
+    color: red;
+    font-size: 0.32rem;
+  }
+
+  .buo {
+    font-size: 0.64rem;
+    line-height: 0.8rem;
+    font-family: Roboto-Regular;
+    color: #333333;
+  }
+
+  .one {
+    width: 0.373333rem;
+    height: 0.373333rem;
+    border-radius: 50%;
+    background: #6363FF;
+    position: absolute;
+    top: 0;
+    left: -0.72rem;
+  }
+
+  .buoTitle {
+    font-size: 0.613333rem;
+    font-family: Roboto-Medium;
+    color: rgba(51,51,51,1);
+    line-height: 0.8rem;
+    font-weight: bold;
+    margin: 0.266667rem 0;
+  }
+
+  mark {
+    color: #6363FF;
+    background: #ffffff;
+    font-size: 0.64rem;
+    line-height: 0.8rem;
+    font-family: Roboto-Regular;
+  }
+}
+
+/*适配ipad pro*/
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .box {
+    width: 100%;
+    height: 1.733333rem;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.013333rem solid #BFBFBF;
+    position: relative;
+  }
+
+  .item {
+    display: inline-block;
+    text-align: center;
+    width: 33.333333%;
+    height: 1.733333rem;
+    line-height: 1.733333rem;
+    font-size: 0.666667rem;
+  }
+
+  .active {
+    color: #6363FF;
+    font-weight: bold;
+    height: 1.733333rem;
+    line-height: 1.733333rem;
+    position: relative;
+  }
+
+  .active:before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 0.013333rem;
+    width: 50%;
+    height: 0.16rem;
+    background-color: #6363FF;
+    border-bottom-left-radius: 0.16rem;
+    border-bottom-right-radius: 0.16rem;
+    border-top-left-radius: 0.16rem;
+    border-top-right-radius: 0.16rem;
+  }
+
+  .content {
+    margin-top: 1.066667rem;
+    width: 90%;
+    height: 100%;
+    margin-left: 0.666667rem;
+    border-left: 0.106667rem solid #b3e1ff;
+    padding-left: 0.533333rem;
+    box-sizing: border-box;
+  }
+
+  .contentTwo,
+  .contentThree {
+    margin-top: 1.066667rem;
+    width: 90%;
+    height: 100%;
+    margin-left: 0.666667rem;
+    padding-left: 0.533333rem;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  .contentItem {
+    position: relative;
+    margin-bottom: 0.866667rem;
+    padding-right: 0;
+  }
+
+  h2 {
+    font-size: 0.693333rem;
+    font-weight: bold;
+    padding-bottom: 0.466667rem;
+    font-family: Roboto-Bold;
+    color: rgba(51,51,51,1);
+  }
+
+  h3 {
+    font-size: 0.32rem;
+    font-weight: bold;
+    padding-bottom: 0.333333rem;
+    font-family: Roboto-Bold;
+    color: rgba(51,51,51,1);
+  }
+
+  h5 {
+    display: inline-block;
+    color: red;
+    font-size: 0.32rem;
+  }
+
+  .buo {
+    font-size: 0.64rem;
+    line-height: 0.8rem;
+    font-family: Roboto-Regular;
+    color: #333333;
+  }
+
+  .one {
+    width: 0.373333rem;
+    height: 0.373333rem;
+    border-radius: 50%;
+    background: #6363FF;
+    position: absolute;
+    top: 0;
+    left: -0.72rem;
+  }
+
+  .buoTitle {
+    font-size: 0.613333rem;
+    font-family: Roboto-Medium;
+    color: rgba(51,51,51,1);
+    line-height: 0.8rem;
+    font-weight: bold;
+    margin: 0.266667rem 0;
+  }
+
+  mark {
+    color: #6363FF;
+    background: #ffffff;
+    font-size: 0.64rem;
+    line-height: 0.8rem;
+    font-family: Roboto-Regular;
+  }
+}

@@ -1,0 +1,33 @@
+@import url('../../lib/color.less');
+
+.cllist{
+	.cl-form {
+		border: solid 1px @box-border-color;
+		margin: 10px 10px;
+		padding: 10px 20px;
+		border-radius: 5px;
+	}
+}
+
+.cl-table{
+	margin: 10px 10px;
+  .cl-table-cloumn {
+    display: flex;
+    flex-direction: column;
+    >div {
+      flex: 1;
+      height: 24px;
+      text-indent: 15px;
+      width: 120%;
+      margin-left: -8px;
+      line-height: 1.5;
+      font-size: 14px;
+      &:first-child {
+        border-bottom: solid 1px @box-border-color;
+      }
+    }
+  }
+  .yellow {
+    background-color: #FCE496;
+  }
+}

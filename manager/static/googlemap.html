@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <title>Cashlending Map</title>
+    <link rel="stylesheet" href="style/googlemap.css">
+
+  </head>
+  <body>
+    <div id="right-panel">
+      <div id="inputs">
+          <section class="lbs-info"></section>
+          <section class="home-info"></section>
+          <section class="company-info"></section>
+      </div>
+
+      <div id="fix-input">
+        <section>
+          <label>Home Address:</label>
+          <input type="text" name="home" id="home-address">
+          <button onclick="search()">search</button>
+        </section>
+        <section>
+          <label>Company Address:</label>
+          <input type="text" name="company" id="company-address">
+          <button onclick="search()">search</button>
+        </section>
+      </div>
+
+      <div class="result">
+        <strong>Results</strong>
+      </div>
+      <div id="output"></div>
+      <div>
+        <button class="save" onclick="saveAddress()" id="save">save</button>
+      </div>
+    </div>
+    <div id="map"></div>
+
+    <script src="js/googlemap.js"></script>
+    <script src="lib/swal.min.js"></script>
+    <script src="lib/reqwest.min.js"></script>
+    <script src="lib/md5.min.js"></script>
+    <!--<script async defer-->
+    <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe-ECa_wleF91bmElwTvuiA2-d_5MkaB0&callback=initMap&language=en">-->
+    <!--</script>-->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY9lQnZC3-NHTs44LN3_rmbWfMoDfiUPA&callback=initMap&language=en"-->
+            <!--type="text/javascript"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9jXa5tOb0U_zJDaT9uti5BjSIHfXLDl4&callback=initMap&language=en"
+            type="text/javascript"></script>
+  </body>
+</html>

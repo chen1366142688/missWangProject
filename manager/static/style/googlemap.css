@@ -1,0 +1,79 @@
+#right-panel {
+  font-family: 'Roboto', 'sans-serif';
+  line-height: 12px;
+  padding-left: 10px;
+}
+#right-panel select,
+#right-panel input {
+  font-size: 14px;
+}
+#right-panel select {
+  width: 100%;
+}
+#right-panel i {
+  font-size: 12px;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+  width: 50%;
+}
+#right-panel {
+  float: right;
+  width: 48%;
+  padding-left: 2%;
+}
+#inputs section {
+  border-bottom: solid 1px #cccccc;
+}
+#fix-input {
+  margin-top: 10px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #cccccc;
+}
+#fix-input section {
+  margin-top: 10px;
+}
+#fix-input section input {
+  width: 300px;
+}
+#fix-input section button {
+  background-color: #49a9ee;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+#fix-input section button:focus {
+  outline: none;
+}
+#output {
+  padding-top: 10px;
+  border-bottom: solid 1px #cccccc;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.result {
+  margin-top: 10px;
+}
+.save {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 80px;
+  font-size: 14px;
+  background-color: #49a9ee;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+.save:focus {
+  outline: none;
+}

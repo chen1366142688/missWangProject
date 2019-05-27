@@ -1,0 +1,83 @@
+.credit-collection-information .fill-content {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-rigth: 10px;
+}
+.credit-collection-information .fill-content:nth-child(2) {
+  margin-bottom: 30px;
+}
+.credit-collection-information .title {
+  text-align: right;
+  line-height: 3;
+}
+.credit-collection-information .btn {
+  text-align: left;
+  line-height: 3;
+}
+.te-modal .ant-modal-body {
+  overflow: auto;
+}
+.te-modal .tableexport-caption {
+  text-align: right;
+  caption-side: top;
+}
+.te-modal .tableexport-caption button {
+  margin-left: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 500;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1.15;
+  padding: 0 15px;
+  font-size: 12px;
+  border-radius: 4px;
+  height: 28px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #49a9ee;
+  border-color: #d9d9d9;
+  color: #ffffff;
+}
+.te-modal #ex-table,
+.te-modal #ex-table1,
+.te-modal .ex-table {
+  border: 1px solid #5F6F7E;
+  border-collapse: collapse;
+  width: 100%;
+  overflow: auto;
+}
+.te-modal #ex-table th,
+.te-modal #ex-table1 th,
+.te-modal .ex-table th {
+  border: 1px solid #E2E2E2;
+  color: #000000;
+  text-align: left;
+  font-weight: 500;
+  padding: 2px 4px 2px 4px;
+  margin: 0;
+}
+.te-modal #ex-table td,
+.te-modal #ex-table1 td,
+.te-modal .ex-table td {
+  margin: 0;
+  padding: 5px 2px;
+  border: 1px solid #E2E2E2;
+}
+.te-modal #ex-table tr:hover,
+.te-modal #ex-table1 tr:hover,
+.te-modal .ex-table tr:hover {
+  background-color: #E2E2E2;
+}

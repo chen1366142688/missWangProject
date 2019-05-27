@@ -1,0 +1,65 @@
+.cl-block-list {
+  margin: 15px 0 !important;
+  border-radius: 5px !important;
+  font-size: 14px;
+}
+.cl-block-list .ant-card-head {
+  line-height: 35px;
+  height: 35px;
+  border-radius: 5px !important;
+}
+.cl-block-list .ant-card-body {
+  border: none;
+  padding: 0 !important;
+  border-radius: 5px !important;
+}
+.cl-block-list .ant-card-body .ant-card-grid {
+  padding: 0;
+}
+.cl-block-list .ant-card-body .ant-card-grid > div > div {
+  height: 48px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.cl-block-list .ant-card-body .ant-card-grid img {
+  height: 45px;
+  width: 45px;
+}
+.cl-block-list .ant-card-body .ant-card-grid .block-title {
+  background-color: #ecf6fd;
+  border-right: 1px solid #d9d9d9;
+  font-size: 14px;
+  font-weight: 500;
+  border-right-radius: 5px !important;
+}
+.cl-block-list .ant-card-body .ant-card-grid .block-body {
+  color: #000000;
+  word-wrap: break-word;
+  word-break: break-all;
+  width: 50%;
+  overflow: auto;
+}
+.cl-block-list .ant-card-head-title {
+  color: #999999 !important;
+}
+.cl-block-list .edit {
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  top: 18px;
+  color: #108ee9;
+}
+.cl-block-list .modifing {
+  color: red;
+}
+.cl-block-list .modified {
+  color: #ff6206;
+}
+.cl-block-list .title-btn {
+  margin-right: 10px;
+}

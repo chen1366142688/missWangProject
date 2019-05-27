@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Urgent need of money? Use CashLending">
+  <title>Getting Money Guide</title>
+  <style>
+    *{
+       margin: 0;
+       padding: 0;
+    }
+   </style>
+</head>
+<body>
+  <div id='content'></div>
+  <p id="greySquares">
+    <span id="repaymentCode" style="color:rgb(99,99,255);display: block; text-align:center"></span>
+  </p>
+  <script>
+      // let str = 'Please take these steps to get your money:||Step 1: You have chosen getting money via {Cebuana Lhuillier}. Please go to the partner branch.||Step 2: Use the reference number below.||Reference Number: {342422232}';
+      //  getRepaymentInfo(str)
+       function getRepaymentInfo(paramStr) {
+          var list = paramStr.split(",");
+          // var repaymentChannel = (list && list.length && list[0]) || "0"; //机构
+          // var repaymentCode = (list && list.length && list[0]) || "0"; //还款吗
+          // document.getElementById('repaymentCode').innerHTML=repaymentCode;
+          var repaymentContent = (list && list.length && list[0]) || "";//文案
+          repaymentContent=repaymentContent.replace(/{/g, "<span class='blue' style='font-size:120%;font-weight:bold;color:#6363FF';>")
+          repaymentContent=repaymentContent.replace(/}/g,"</span>")
+          var contentList = repaymentContent.split("||");
+          for(var j=0,html='';j<contentList.length;j++){ 
+             html+= `<p class="title" style="margin: 20px 10px 0 15px">${contentList[j]}</p>`
+          }
+          document.getElementById('content').innerHTML=html
+       }
+     </script>
+</body>
+</html>

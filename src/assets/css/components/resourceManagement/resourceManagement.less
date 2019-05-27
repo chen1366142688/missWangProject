@@ -1,0 +1,57 @@
+.resource-management {
+
+  .ant-collapse-header {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  margin-top: 2rem;
+  .resource-item {
+    display: flex;
+    flex-direction: row;
+    &:hover {
+      background-color: #eeeeee;
+    }
+    >p {
+      &:first-child {
+        flex: 15;
+        font-size: 14px;
+      }
+      &:last-child {
+        flex: 1;
+        font-size: 22px;
+        >i {
+          cursor: pointer;
+          color: red;
+        }
+      }
+    }
+    height: 45px;
+    border-bottom: solid 1px #cccccc;
+    line-height: 45px;
+    padding-left: 20px;
+  }
+
+  .input {
+    height: 45px;
+    margin-top: 15px;
+    input {
+      height: 40px;
+    }
+  }
+
+  .resource-header {
+    display: flex;
+    flex-direction: row;
+    >p {
+      &:first-child {
+        flex: 15;
+      }
+      &:last-child {
+        flex: 1;
+        color: red;
+        font-size: 22px;
+      }
+    }
+  }
+}

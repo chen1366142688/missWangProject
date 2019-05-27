@@ -1,0 +1,47 @@
+.banner-management {
+  margin-bottom: 40px;
+
+  .banner-management-group {
+    margin-top: 30px;
+  }
+  
+  .banner-img {
+    width: 400px;
+  }
+  .delete-banner {
+    color: red;
+    font-size: 16px;
+  }
+
+  .mobile-monitor {
+    >img{
+      width: 340px;
+      position: absolute;
+      top: -20px;
+      height: 650px;
+    }
+  }
+  .mobile-content{
+    width: 280px;
+    height: 470px;
+    background-color: #efefef;
+    position: absolute;
+    top: 62px;
+    left: 32px;
+    overflow-y: auto;
+  }
+  .mobile-content::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+  }
+  .mobile-content::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+  }
+  .mobile-content::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+  }
+}

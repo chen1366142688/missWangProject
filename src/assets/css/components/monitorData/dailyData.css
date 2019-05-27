@@ -1,0 +1,30 @@
+.daily-monitor .select-panel {
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+}
+.daily-monitor .select-panel .daily-monitor-footer {
+  margin: 0;
+  text-align: right;
+}
+.daily-monitor .select-panel .daily-monitor-footer button {
+  margin-left: 8px;
+}
+.daily-monitor .info-data {
+  text-align: right;
+  margin-right: 10px;
+}
+.daily-monitor .ant-table-wrapper {
+  margin: 0 10px;
+}
+.daily-monitor .ant-table-wrapper .ant-table-body {
+  max-height: 650px;
+  overflow: auto;
+}
+.daily-monitor .green-label {
+  color: #00a297;
+}
+.daily-monitor .red-label {
+  color: #ff8084;
+}

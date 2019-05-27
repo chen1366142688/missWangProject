@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>invite friends</title>
+    <link rel="stylesheet" href="style/googlemap.css">
+    <script>
+        function getAppInviteInfo(paramStr) {
+            var list = paramStr.split(',');
+
+            var approvedReferrals = document.getElementsByClassName('approved-referrals')[0];
+            var income = document.getElementsByClassName('income')[0];
+
+            approvedReferrals.innerText = (list && list.length && list[0]) || "0";
+            income.innerText = (list && list.length && list[1]) || "0.00";
+        }
+
+        function onWithDrawButtonClicked() {
+            app.onWithDrawButtonClicked();
+        }
+
+        function shareToFacebook(b) {
+            app.shareToFacebook(b);
+        }
+    </script>
+</head>
+<body>
+<img src="./img/inviteFriendsMegaLoan.png" class="bg-img"/>
+<div class="cash-record">
+    <span class="approved-referrals">0</span>
+    <span class="income">0.00</span>
+</div>
+<img src="img/appShareButton.png" class="app-share" onclick="shareToFacebook(false)"/>
+<img src="img/facebookShareButton.png" class="facebook-share" onclick="shareToFacebook(true)"/>
+<img src="./img/withdraw.png" class="with-draw" onclick="onWithDrawButtonClicked()">
+</body>
+<style>
+    .test {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 60px;
+    }
+
+    .cash-record {
+        position: absolute;
+        top: 1732px;
+        left: 158px;
+        width: 675px;
+        background-color: #2420a7;
+    }
+
+    .cash-record span {
+        font-size: 72px;
+        display: inline-block;
+        text-align: center;
+        color: #f8d12a;
+        font-family: monospace;
+    }
+
+    .cash-record .approved-referrals {
+        width: 32%;
+        margin-right: 19%;
+    }
+
+    .cash-record .income {
+        width: 47%;
+    }
+
+    .bg-img {
+        width: 100%;
+    }
+
+    .app-share {
+        position: absolute;
+        top: 1069px;
+        left: 129px;
+        width: 721px;
+    }
+
+    .facebook-share {
+        position: absolute;
+        top: 911px;
+        left: 130px;
+        width: 721px;
+    }
+
+    .with-draw {
+        position: absolute;
+        top: 1982px;
+        left: 306px;
+        width: 368px;
+    }
+</style>
+</html>

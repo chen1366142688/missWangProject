@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- load and instantiate ScrollReveal first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="./js/scrollreveal.min.js"></script>
+    <script>
+      window.sr = ScrollReveal();
+
+      // Add class to <html> if ScrollReveal is supported
+      // Note: this method is deprecated, and only works in version 3
+      if (sr.isSupported()) {
+        document.documentElement.classList.add('sr');
+      }
+
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* Ensure elements load hidden before ScrollReveal runs */
+      .sr .fooReveal { visibility: hidden; }
+     
+      @media screen and (min-width:1680px) {
+        .header{height: 960px}
+        .header-desc {
+          font-size: 40px;
+        }
+        .our  {
+          height: 800px;
+        }
+      }
+
+      @media screen and (min-width:1200px) and (max-width:1670px){
+        .header{height: 960px}
+        .header-desc {
+          font-size: 40px;
+        }
+        .our  {
+          height: 760px;
+        }
+      }
+      @media screen and (min-width: 960px) and (max-width: 1199px) {
+        .header{height: 760px}
+        .header-desc {
+          font-size: 34px;
+        }
+        .our  {
+          height: 500px;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 959px){
+        .header{height: 700px}
+        .header-desc {
+          font-size: 32px;
+        }
+        .our  {
+          height: 420px;
+        }
+      }
+      @media only screen and (min-width: 480px) and (max-width: 767px){
+        .header{height: 500px}
+        .header-desc {
+          font-size: 30px;
+        }
+        .our  {
+          height: 520px;
+        }
+      }
+      @media only screen and (max-width: 479px) {
+        .header{height: 300px}
+        body{
+          zoom: 0.4;
+        }
+      }
+
+
+      .header {
+        background:transparent url(./img/banner.png) no-repeat scroll 0px -80px; 
+        background-size: 100% 120%;
+      }
+      .header-bg {
+        width: 100%;
+      }
+
+      .nav {
+        /*position: absolute;*/
+        height: 64px;
+        line-height: 64px;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        color: #ffffff;
+      }
+
+      .nav-bg {
+        height: 64px;
+        background: #8092ab;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+      }
+
+      .logo {
+        display: inline-block;
+        position: relative;
+        left: 100px;
+        font-weight: bold;
+      }
+
+      .logo img {
+        width: 30px;
+        margin-right: 6px;
+        margin-top: 12px;
+      }
+
+      .logn-text {
+        display: block;
+        position: absolute;
+        left: 40px;
+        bottom: 8px;
+      }
+
+      .menu {
+        display: inline-block;
+        position: absolute;
+        right: 60px;
+      }
+      
+      .menu ul {
+        list-style: none;
+      }
+      .menu ul li {
+        display: inline-block;
+        height: 64px;
+        padding-right: 40px;
+      }
+
+      .menu ul li a {
+        text-decoration:none; 
+        font-weight: bold;
+        text-align: left;
+        cursor: pointer;
+        color: #ffffff;
+      }
+
+      .header-desc {
+        text-align: center;
+        font-weight: bold;
+        color: #ffffff;
+        margin-top: 20%;
+      }
+
+      .header-desc p {
+        height: 100px;
+      }
+
+      .content {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      .title {
+        height: 100px;
+      }
+
+      .title img {
+        display: block;
+        position: absolute;
+        width: 50px;
+      }
+      .title p {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        color: #063d3c;
+      }
+
+      .desc-details {
+        line-height: 38px;
+        font-size: 16px;
+        color: #2d2d2d;
+      }
+
+      .our {
+        margin-top: 100px;
+        background-image: url(./img/desc1.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .our h3 {
+        font-size: 40px;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .imgs {
+        margin-top: 100px;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .left {
+        flex: 6;
+        background-image: url(./img/desc2.png);
+        background-size: 100% 100%;
+        margin-right: 30px;
+      }
+
+      .right {
+        flex: 4;
+        flex-direction: column;
+        display: flex;
+      }
+
+      .top {
+        flex: 8;
+        background-image: url(./img/desc3.png);
+        background-size: 100% 100%;
+      }
+
+      .bottom {
+        flex: 3;
+        margin-top: 30px;
+        display: flex;
+      }
+
+      .box {
+        border: solid 3px #04895a;
+        flex: 3;
+        margin-right: 30px;
+        padding: 10px 10px;
+      }
+
+      .trangle {
+        flex: 3;
+        background-image: url(./img/sanjiao.png);
+        background-size: 95% 95%;
+        background-repeat: no-repeat;
+
+      }
+      .empty {
+        flex: 2
+      }
+
+      .footer {
+        height: 60px;
+        margin-top: 100px;
+        /*text-align:*/
+        text-align: center;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <a href="https://www.facebook.com/sharer.php?u=${shareUrl}" target="_blank" style="margin-right:19px;">  
+              <img src="${fbShareJpg}" style="border:none 0;" alt="" /></a>  
+    </div>
+    <div class="fooContainer">
+      <div class="fooReveal header">
+        <div class="nav">
+          <div class="logo">
+            <img src="./img/logo.png" alt="logo"> <span class="logn-text">Visionary</span>
+          </div>
+          <div class="menu" id="menu">
+            <ul>
+              <li><a href="#menu">HOME</a></li>
+              <li><a href="#content">OUR PRODUCTS</a></li>
+              <li><a href="#footer">CONTACT US</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-bg"></div>
+        <div class="header-desc">
+          <p>VISIONARY TECHNOLOGY INC</p>
+          <p>THE FRIST FINTECH PLATFORM IN THE PHILIPPINES</p>
+        </div>
+      </div>
+      <div class="fooReveal content" id="content">
+        <div class="desc">
+          <div class="title">
+            <img src="./img/sanjiao.png" alt="">
+            <p>Who We Are ? </p>
+          </div>
+          <div class="desc-details">
+            Relying on advanced Internet security technology and big data technology, based on massive credit and behavior data, combined with the most advanced method of deep learning of artificial intelligence, it aims at providing safe and fast and reliable financial services for general young people and promoting the development of digital Inclusive Finance. 
+          </div>
+        </div>
+        <div class="service our">
+          <h3>
+            OUR SERVICES
+          </h3>
+        </div>
+        <div class="service imgs">
+          <div class="left">
+            
+          </div>
+          <div class="right">
+            <div class="top"></div>
+            <div class="bottom">
+              <div class="box"></div>
+              <div class="trangle"></div>
+              <div class="empty"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fooReveal footer"  id="footer">
+        <img src="./img/footer.png" alt="">
+      </div>
+    </div>
+
+    <!-- make reveal calls last -->
+    <script>
+      sr.reveal('.fooReveal', { container: '.fooContainer' });
+      let header = document.querySelector(".header");
+      console.log(header);
+      header.style.height = document.body.clientHeight;
+
+    </script>
+
+  </body>
+</html>

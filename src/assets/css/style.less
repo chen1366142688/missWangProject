@@ -1,0 +1,140 @@
+@import url('./lib/color.less');
+@import url('./lib/tableSorter.less');
+@import url('./lib/riskControl.less');
+@import url('./components/faqs/index.css');
+@import url('./components/login/index.css');
+@import url('./components/clblockList/index.css');
+@import url('./components/cllist/index.css');
+@import url('./components/clradio/index.css');
+@import url('./components/draglist/index.css');
+@import url('./components/loanaudit/index.css');
+@import url('./components/feedback/index.css');
+@import url('./components/creditCollection/index.css');
+@import url('./components/bannerManagement/bannerManagement.css');
+@import url('./components/resourceManagement/resourceManagement.css');
+@import url('./components/creditReport/creditReport.css');
+@import url('./components/monitorData/dailyData.css');
+@import url('./components/BiMainProcess/registerApplyFunnel.css');
+@import url('./components/mailCenter/maiCenter.css');
+@import url('./layout.css');
+@import url('./viewer.min.css');
+@import url('./jquery.magnify.css');
+@import url('./components/smallTools/index.css');
+
+
+
+#app{
+	background-color: @bg-color;
+	height: 100%;
+	overflow: hidden;
+}
+
+*{
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.example-img {
+	width: 100%;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+
+* {
+	padding: 0 0;
+}
+
+.full-loading {
+	min-height: 400px;
+	line-height: 400px;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+}
+
+.ant-modal{
+	min-width: 700px !important;
+}
+
+.anticon-check-circle{
+	color: @green;
+}
+.anticon-close-circle{
+	color: @red;
+}
+
+.ant-table-row  {
+	>td{
+		color: #000000;
+	}
+}
+
+.table-title {
+	color: #999999 !important;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  25% {opacity: 0.5;}
+  50% {opacity: 1;}
+  75% {opacity: 0.5;}
+  100% {opacity: 0;}
+}
+
+.anticon-exclamation-circle {
+  color: red;
+  font-size: 16px;
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  animation: 1.5s fade-in infinite;
+}
+
+.twinkle {
+  color: red;
+  animation: 1.5s fade-in infinite;
+}
+
+.blueFont {
+  td {
+    color: #ff6206;
+  }
+}
+.withdrawModal{
+	.ant-modal-content{
+		width: 301px !important;
+		margin: 0 auto;
+	}
+	input{
+		width: 200px;
+		margin-left: 25px;
+	}
+	.ant-select{
+		width: 200px;
+		margin-left: 25px;
+	}
+	.ant-modal-footer{
+		text-align: center !important;
+	}
+	.ant-modal-body{
+		line-height: 10px;
+		font-weight: 400;
+		color: #000;
+	}
+}
+.promotionClients{
+	.ant-modal-body{
+		.ant-form-item-control-wrapper{
+			width: 260px;
+		}
+	}
+}
+

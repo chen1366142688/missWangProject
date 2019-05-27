@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="build/flexible_css.debug.js"></script>
+    <script src="build/flexible.debug.js"></script>
+    <title>Help Center</title>
+    <link href="build/base.debug.css" rel="stylesheet"/>
+    <link href="build/index.debug.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="box">
+        <span class="item active" data-name="1">How to Loan</span>
+        <span class="item center" data-name="2">Apply Concerns</span>
+        <span class="item" data-name="3">Repayment</span>
+    </div>
+    <div class="content">
+        <div class="contentItem">
+            <h2>Step One：Apply</h2>
+            <p class="buo">Follow the steps to fill in the application, make sure all information are <mark>accurate and complete.</mark></p>
+            <b class="one"></b>
+        </div>
+        <div class="contentItem">
+            <h2>Step Two: Evaluation</h2>
+            <p class="buo">It takes time for verifying. We will give you feedback as soon as possible by<mark> APP message, SMS, </mark>etc. after receiving your order. Please wait patiently. </p>
+            <b class="one"></b>
+        </div>
+        <div class="contentItem">
+            <h2>Step Three: Disbursement</h2>
+            <b class="buoTitle">1.Approved</b>
+            <p class="buo">Paymnent partner: <mark>Pick up cash with the reference number in SMS from.</mark></p>
+            <p class="buo">Online banking: Fill in the <mark>bank account </mark>information in the app to receive your loan directly.</p>
+            <p class="buoTitle">2.Rollback/Denied</p>
+            <p class="buo">Please <mark>correct</mark> your application after received app notification and SMS.<mark> Reapply after 7 days if denied.</mark></p>
+            <b class="one"></b>
+        </div>
+        <div class="contentItem">
+            <h2>Step Four: Repayment</h2>
+            <p class="buo"><mark>Repayment on time </mark>will increase your credit and make it easier to borrow again.</p>
+            <b class="one"></b>
+        </div>
+    </div>
+    <div class="contentTwo">
+        <div class="contentItem">
+            <h2>1.Any feedback of my application?</h2>
+            <p class="buo">you will be given an <mark> app notification</mark> and <mark> SMS </mark> once you got approved. Please Wait Patiently.</p>
+        </div>
+        <div class="contentItem">
+            <h2>2.How to get the money if approved?</h2>
+            <p class="buo"> Paymnent partner: Pick up cash with the <mark> reference number </mark> in SMS and in your app</p><br>
+            <p class="buo">Online banking: Fill in the <mark> bank account </mark> information in the app to receive your loandirectly.</p><br> 
+            <p class="buo">Please expect the loan arrived today or within tomorrow. Thank you for trusting us please come again!</p>
+        </div>
+        <div class="contentItem">
+            <h2>3. Why denied me? Can I reapply？</h2>
+            <p class="buo">We feel sorry that your application has not been approved. We can only advice that our evaluation are based on the information you provided Please re-apply as soon as possible and make sure that the information provided is accurate and complete We look forward to you re-application</p>
+            <p class="buo"><mark>Reapply after 7 days,</mark>  please provide accurate and reliable info to have a higher chance of approval.</p>
+        </div>
+    </div>
+    <div class="contentThree">
+        <div class="contentItem">
+            <h2>Method 1：Via online banking</h2>
+            <p class="buo">1.Open CashBus app ,and tap <mark>REPAYNOW</mark> on app</p>
+            <p class="buo">2.tap the <mark>REPAY VIA ONLINE BANKING</mark></p>
+            <p class="buo">3.follow the steps of online banking </p>
+        </div>
+        <div class="contentItem">
+            <h2>Method 2：Via remittance & payment center</h2>
+            <p class="buo">1.Go to a payment partner branch.</p>
+            <p class="buo">2.Complete the needed information.</p>
+            <P class="buo">Always use the <mark>reference number</mark> we gave you in app</P>
+            <p class="buo">3.Make a payment and receive a payment confirmation receipt.</p>
+        </div>
+        <div class="contentItem contentItems">
+            <h2>Repay when overdue</h2>
+            <p class="buo">Overdue repayment will increase interest. Bad credits will be recorded  by banks, financial platforms, etc., and it will affect your future purchase of house, cars, etc. Long-time overdue would be included in credit blacklist and we will put into </p><h5>We do hope you can repay on time.</h5> <p class="buo" style="display: inline-block;">Thank you!</p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    $(function(){
+        $(".box .item").click(function(){
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            if($(this).attr('data-name')==1){
+                $('.content').css('display','block')
+                $('.contentTwo').css('display','none')
+                $('.contentThree').css('display','none')
+            }else if($(this).attr('data-name')==2){
+                $('.content').css('display','none')
+                $('.contentTwo').css('display','block')
+                $('.contentThree').css('display','none')
+            }else if($(this).attr('data-name')==3){
+                $('.content').css('display','none')
+                $('.contentTwo').css('display','none')
+                $('.contentThree').css('display','block')
+            }
+        });
+    })
+</script>

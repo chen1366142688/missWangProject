@@ -1,0 +1,17 @@
+.smallTools {
+  margin-left: 50px;
+}
+.smallTools .ant-modal-content {
+  width: 400px;
+  margin: 0 auto;
+}
+.smallTools .ant-modal-content .ant-btn {
+  width: 80px;
+  margin-left: 140px;
+  margin-top: 30px;
+}
+.smallTools .ant-modal-content h5,
+.smallTools .ant-modal-content h3 {
+  text-align: center;
+  margin-top: 15px;
+}

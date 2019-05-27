@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="build/flexible_css.debug.js"></script>
+    <script src="build/flexible.debug.js"></script>
+    <title>Receive up to per referral</title>
+    <link href="build/base.debug.css" rel="stylesheet"/>
+    <link href="build/receive.debug.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="w_container">
+        <img src="./img/receiveBg.png" class="bg-img"/>
+      <span class="w_rules" onclick="onRulesButtonClicked()">Rules</span>
+      <div class="w_p300"><span>₱</span>300</div>
+      <p class="w_invite">Invite friends to get cash</p>
+      <div id="w_shareFacebook" onclick="shareToThirdLevel(true)"/>Share to facebook</div>
+      <div id="w_shareApps" class="facebook-share" onclick="shareToThirdLevel(false)">Share on other Apps</div>
+      <div class="w_section1">
+        <p class="w_sec1_title">ONLY 3 STEPS TO GET CASH</p>
+        <div class="w_sec1_you">
+          <p class="you">YOU</p>
+          <p class="youTxt">Invite friends to register with my referring code</p>
+        </div>
+        <p class="immBox"><img src="./img/toDown.png"/> </p>
+        <div class="w_sec1_frineds">
+            <p class="frineds">FRIENDS</p>
+            <p class="frinedsTxt">Get loan successfully</p>
+        </div>
+        <p class="immBox"><img src="./img/toDown.png"/></p>
+        <div class="w_sec1_frineds-you">
+          <p class="frineds-you">YOU & FRIENDS</p>
+          <p class="frineds-youTxt">
+            Get referral cash rewards</p>
+        </div>
+      </div>
+      <div class="w_section2">
+        <p class="w_sec2_title">REWARDS ITEMS</p>
+        <div class="sec2_oneBox">
+          <span class="one1">YOU</span>
+          <span class="one2">REFERRED FRIENDS</span>
+          <span class="one3">REWARDS</span>
+        </div>
+        <div class="sec2_foot">
+          <div class="sec2_footLeft">
+            <p class="footLTop">When you got the 1st loan successfully but haven’t fully repaid</p>
+            <p class="footLBottom">When you applying the 2nd loan or you are a &nbsp; &nbsp; re-borrower</p>
+          </div>
+          <div class="sec2_footCenter">If a referred friend get the 1st loan successfully</div>
+          <div class="sec2_footRight">
+              <p class="footRTop">₱100 for you and ₱100 for referred friend</p>
+              <p class="footRBottom">₱200 for you and ₱100 for referred friend</p>
+          </div>
+        </div>
+      </div>
+      <div class="w_section3">
+        <p class="w_section3Title">MY CASH RECORDS</p>
+        <div class="w_section3Section">
+          <div class="section3SecLitem">
+            <p id="approved">0</p>
+            <p class="arrrovedTxt">Approved Referrals</p>
+          </div>
+          <div class="section3SecRitem">
+              <p id="inCome">0.00</p>
+              <p class="inComeTxt">Income(PHP)</p>
+          </div>
+        </div>
+        <div id="footBtn" onclick="onWithDrawButtonClicked()">Withdraw</div>
+      </div>
+      <div class="footerTxt">All explanation rights reserved by our company.</div>
+    </div>
+    <div id="mask"></div>
+    <div id="rules-panel">
+        <h3>Detailed Rules</h3>
+        <div>
+            <h4><strong>How to join?</strong></h4>
+            <p>1. Click below "Share on Facebook"/" Share on other App" button and share with your friends via Facebook,
+                SMS, Messenger or other SNS;</p>
+            <p>2. Your friends must register with your unique referring code contained in your shared link.</p>
+            <p style="margin-bottom: 0">3 Once a Referred Friend's get the first loan, you/ your referred friends can get cash according to below conditions:</p>
+            <p style="margin: 0">(1) if your first loan already get approved and get transferred to you, but haven't been fully repaid, both you and your referred friend get PHP100;</p>
+            <p style="margin-bottom: 0.3rem">(2) if you are applying your 2nd loan OR you are a reborrower, you can get PHP200 and your referred friend get PHP100.</p>
+            <p>4 Cash will be awarded if ALL above conditions are met.</p>
+            <h4><strong>How to withdraw cash?</strong></h4>
+            <p>You can withdraw your cash from <span style="font-style: italic">Me-My Wallet</span> in APP.</p>
+        </div>
+        <button onclick="onRulesClose()">I Know</button>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+//        document.cookie = "pt=b0d23098c00d80e8c68fff2e08805791b1dfbf72cd7540078ea68a1f52be6c0fd3564992caa8adc673a913e19eb218035bf9009ad4870c99d8730987e6a4c86ac0cb5e5a146cc29f3a8568a9aa3483821fa7e9f084dafa042dfb2a861c70cbe7; path=/";
+
+    $.ajax({
+        url: "/loadcashweb/member/withdraw/account/view",
+        type: 'GET',
+        xhrFields: {
+            withCredentials: true // 这里设置了withCredentials
+        },
+        success: function (result) {
+            if (result.code == 200) {
+                $('#approved').text(result.data.invited || "0");
+                $('#inCome').text(result.data.reward || "0");
+            }
+        }
+    })
+
+    function onWithDrawButtonClicked() {
+        app.onWithDrawButtonClicked($('#approved').text, $('#inCome').text);
+    }
+
+    function shareToThirdLevel(b) {
+        app.shareToThirdLevel(b);
+    }
+
+    function onRulesButtonClicked() {
+        document.querySelector('#rules-panel').className = 'open';
+        document.querySelector('#mask').className = 'open';
+        document.getElementsByClassName('w_container')[0].className += " hidden-overflow";
+    }
+
+    function onRulesClose() {
+        document.querySelector('#rules-panel').className = '';
+        document.querySelector('#mask').className = '';
+        document.getElementsByClassName('w_container')[0].className = "w_container";
+    }
+</script>

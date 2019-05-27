@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="divport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./img/login-logo.png" sizes="32x32" type="image/png"/>
+    <link rel="icon" href="./img/login-logo.png" sizes="64x64" type="image/png"/>
+    <link rel="icon" href="./img/login-logo.png" sizes="128x128" type="image/png"/>
+    <script src="build/flexible_css.debug.js"></script>
+    <script src="build/flexible.debug.js"></script>
+    <title>Urgent need of money? Use XCash</title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="build/recommendLinks.debug.css">
+    <style>
+        @media screen and (min-width:768px){
+            .form{
+                width:77.7778%;
+            }
+            .phone{
+                height:1.5rem;
+                border-radius:0.3rem;
+                font-size: 0.48rem;
+            }
+            .phoneNum{
+                height:1.3rem;
+                border-radius:0.3rem;
+            }
+            .smsBox{
+                height:1.5rem;
+                border-radius:0.3rem;
+                font-size: 0.48rem;
+                margin-top: 0.38rem;
+                padding-right: 0.37rem;
+            }
+            .smsBox input{
+                height:1.3rem;
+                border-radius:0.3rem;
+            }
+            .sendCode{
+                width:2.666667rem;
+                height:1.1rem;
+                border-radius:0.2rem;
+                font-size:0.48rem;
+            }
+            .register,.downLoad{
+                width:100%;
+                height:1.5rem;
+                border-radius:0.3rem;
+                font-size:0.6rem;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+     <div class="form">
+        <div class="phone">
+            <span>+63</span>
+            <input class="phoneNum" type="number" placeholder="Cellphone number" maxlength="10">
+        </div>
+        <div class="smsBox">
+            <input id="code" type="number" placeholder="SMS verification code" maxlength="6">
+            <button class="sendCode">Send</button>
+        </div>
+        <div class="register">Register and Get</div>
+        <div class="downLoad">Download App</div>
+    </div>
+    <div id="modal">
+        <div class="alertM">
+            <div class="text">Existing account. Download App and check it now.</div>
+            <div class="mootFoot">
+                <p class="mootL" id="cancel">Cancel</p>
+                <p class="mootL mootR down">Download</p>
+            </div>
+        </div>
+    </div>
+    <div id="modalBag">
+        <div class="close">×</div>
+        <div class="down">Download App</div>
+    </div>
+     <div id="message">
+         <span class="none-type"></span>
+     </div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/recommendLinks.js"></script>
+</body>
+</html>

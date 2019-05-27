@@ -1,0 +1,9 @@
+.register-apply-funnel .columns-color-one {
+  background: #82f3ec;
+}
+.register-apply-funnel .columns-color-two {
+  background: #7bbef5;
+}
+.register-apply-funnel .hidden-column {
+  display: none;
+}
